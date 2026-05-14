@@ -2,15 +2,17 @@
 
 A Prometheus dashboard for the [Pimoroni Presto](https://shop.pimoroni.com/products/presto) display, rendering MeshCore network metrics from a Prometheus-compatible endpoint.
 
+![Presto Prometheus](docs/photo.jpg)
+
 ## Display
 
 The dashboard shows three metric groups:
 
-| Section | Metrics | Color |
-|---|---|---|
-| **Nodes** | Total connected nodes | Blue |
-| **Advertisements** | 1h / 24h / 7d windows | Pink |
-| **Messages** | 1h / 24h / 7d windows | Teal |
+| Section            | Metrics               | Color |
+| ------------------ | --------------------- | ----- |
+| **Nodes**          | Total connected nodes | Blue  |
+| **Advertisements** | 1h / 24h / 7d windows | Pink  |
+| **Messages**       | 1h / 24h / 7d windows | Teal  |
 
 Metrics are refreshed from the Prometheus API every 60 seconds.
 
@@ -47,11 +49,11 @@ Metrics are refreshed from the Prometheus API every 60 seconds.
 
 ## Configuration
 
-| Constant | Default | Description |
-|---|---|---|
-| `PROMETHEUS_URL` | `https://metrics.ipnt.uk` | Prometheus server base URL |
-| `QUERY` | `meshcore_*` regex | PromQL query string |
-| `REFRESH_INTERVAL` | `60` | Seconds between metric fetches |
+| Constant           | Default                   | Description                    |
+| ------------------ | ------------------------- | ------------------------------ |
+| `PROMETHEUS_URL`   | `https://metrics.ipnt.uk` | Prometheus server base URL     |
+| `QUERY`            | `meshcore_*` regex        | PromQL query string            |
+| `REFRESH_INTERVAL` | `60`                      | Seconds between metric fetches |
 
 ## Expected Metrics
 
